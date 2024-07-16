@@ -1,0 +1,20 @@
+import email_validator
+
+def validate_email_with_library(email):
+  
+
+
+ 
+
+    try:
+        email_validator.validate_email(email)
+        return True
+    except email_validator.EmailNotValidError:
+        return False
+
+
+email = "sarah.po@gmail.com"
+if validate_email_with_library(email):
+    print("آدرس ایمیل معتبر است")
+else:
+    print("آدرس ایمیل معتبر نیست")
